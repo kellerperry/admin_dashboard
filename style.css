@@ -26,6 +26,7 @@ body {
     grid-area: sidebar;
     padding-left: 10px;
     background-color: rgb(59,146,212);
+    color: white;
 }
 
 .side-actions,
@@ -51,10 +52,16 @@ body {
 
 .icon {
     max-height: 18px;
+    padding-left: 10px;
+}
+
+.sidebar .icon {
+    filter: invert(100%) sepia(9%) saturate(2%) hue-rotate(206deg) brightness(112%) contrast(101%);
 }
 
 .logo {
     max-height: 40px;
+    filter: invert(100%) sepia(9%) saturate(2%) hue-rotate(206deg) brightness(112%) contrast(101%);
 }
 
 
@@ -164,18 +171,52 @@ body {
 
 .card-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     align-items: center;
-    padding: 10px;
+    padding: 0 0 10px 10px;
 }
 
 .card {
     border-radius: 5px;
     border-left: 8px solid rgb(240,180,40);
     background-color: white;
-    height: 200px;
+    height: 125px;
     padding: 10px;
 }
 
+.card,
+.updates-section,
+.trending-users {
+    box-shadow: 2px 3px 3px -2px rgba(172, 172, 172, 1);
+}
 
+
+.updates-section,
+.trending-users {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.announcements,
+.trending {
+    margin-right: 20px;
+}
+
+.card-title,
+.update-title {
+    font-weight: bold;
+}
+
+.update-title {
+    font-size: .75rem;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.updates > p:nth-child(2) {
+    font-size: .65rem;
+    padding: 0 0 15px 0;
+    margin: 0;
+}
